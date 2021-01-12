@@ -309,7 +309,7 @@ class requestHandler(BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
 
-	if current_user == f"runner":
+	if current_user == f"runner" or True:
 		url = '0.0.0.0'
 
 	httpd = HTTPServer((url, port), requestHandler)

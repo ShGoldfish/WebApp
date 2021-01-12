@@ -1,2 +1,17 @@
 
 favicon.ico
+
+favicon.ico
+dilithium2
+Running the command openssl req -x509 -new -newkey dilithium2 -keyout dilithium2_CA.key -out certs/dilithium2_CA.crt -nodes -subj "/CN=oqstest CA" -days 365 -config /home/runner/openssl/apps/openssl.cnf
+Running the command openssl genpkey -algorithm dilithium2 -out dilithium2_srv.key
+Running the command openssl req -new -newkey dilithium2 -keyout dilithium2_srv.key -out dilithium2_srv.csr -nodes -subj "/CN=oqstest server" -config /home/runner/openssl/apps/openssl.cnf
+Running the command openssl x509 -req -in dilithium2_srv.csr -out dilithium2_srv.crt -CA certs/dilithium2_CA.crt -CAkey dilithium2_CA.key -CAcreateserial -days 365
+Writing the Algorithm: dilithium2.crt
+Writing the table: ./tables/dilithium2.csv
+Setting the header as: dilithium2.crt
+favicon.ico
+tables/dilithium2.csv
+favicon.ico
+
+favicon.ico
